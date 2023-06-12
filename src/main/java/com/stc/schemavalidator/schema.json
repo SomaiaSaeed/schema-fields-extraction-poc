@@ -1,0 +1,78 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "A": {
+            "type": "object",
+            "properties": {
+                "aa": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "aa"
+            ]
+        },
+        "B": {
+            "type": "array",
+            "items": {
+                "type": [
+                    "number",
+                    "boolean",
+                    "string"
+                ]
+            }
+        },
+        "C": {
+            "type": "integer"
+        },
+        "D": {
+            "type": "object",
+            "properties": {
+                "E": {
+                    "type": "object",
+                    "properties": {
+                        "F": {
+                            "type": "object",
+                            "properties": {
+                                "g": {
+                                    "type": "integer"
+                                }
+                            },
+                            "additionalProperties": false,
+                            "required": [
+                                "g"
+                            ]
+                        }
+                    },
+                    "additionalProperties": false,
+                    "required": [
+                        "F"
+                    ]
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "E"
+            ]
+        },
+        "weekdays": {
+            "type": "array",
+            "items": {
+                "enum": [
+                    "MONDAY",
+                    "TUESDAY"
+                ]
+            }
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "weekdays"
+    ]
+}
